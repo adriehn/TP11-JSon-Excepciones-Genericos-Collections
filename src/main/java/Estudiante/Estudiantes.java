@@ -1,10 +1,4 @@
 package Estudiante;
-
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 public class Estudiantes {
 
     private static Integer id = 0;

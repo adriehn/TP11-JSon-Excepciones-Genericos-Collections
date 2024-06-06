@@ -1,21 +1,11 @@
 package Vista;
 
-import Curso.Cursos;
-import Curso.CursosRepositorio;
-import Curso.GestionCursos;
-import Estudiante.Estudiantes;
-import Estudiante.EstudiantesRepositorio;
 import MisExcepciones.MiExcepcion;
 
 public class Menu {
-
     public static void main(String[] args) throws MiExcepcion {
 
         consola vista = new consola();
-        CursosRepositorio repo = new CursosRepositorio();
-        EstudiantesRepositorio repoestu = new EstudiantesRepositorio();
-
-
         vista.iniciandoPrograma();
         Integer opcion;
         while (true) {
@@ -27,18 +17,21 @@ public class Menu {
                     vista.crearAlumno();
                     break;
                 case 2:
-                    vista.mensajeactualizar();
+                    vista.crearCurso();
                     break;
                 case 3:
-                    vista.mensajeActualizarCurso();
+                    vista.mensajeactualizar();
                     break;
                 case 4:
-                    vista.mensajeELiminarCurso();
+                    vista.mensajeActualizarCurso();
                     break;
                 case 5:
-                    vista.verCursos();
+                    vista.mensajeELiminarCurso();
                     break;
                 case 6:
+                    vista.verCursos();
+                    break;
+                case 7:
                     vista.finalizandoprograma();
                     return;
                 default:

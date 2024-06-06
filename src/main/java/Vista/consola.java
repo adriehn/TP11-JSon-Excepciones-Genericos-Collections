@@ -2,7 +2,6 @@ package Vista;
 
 import Curso.GestionCursos;
 import Estudiante.EstudianteController;
-import Estudiante.Estudiantes;
 import MisExcepciones.MiExcepcion;
 
 import java.util.Scanner;
@@ -49,16 +48,12 @@ public class consola {
 
     public void crearCurso() throws MiExcepcion {
         System.out.println("Ingrese los datos que se le solicitaran");
-        gestionCursos.crearCurso(new String(), this);
+        gestionCursos.crearCurso(pedirCurso(), this);
     }
 
     public void crearAlumno() throws MiExcepcion {
         System.out.println("Ingrese los datos que se le solicitaran");
         control.crearAlumno(this);
-    }
-
-    public void verlista() {
-        control.listar();
     }
 
     public void verCursos() {
@@ -108,11 +103,12 @@ public class consola {
 
         System.out.println("Bienvenido a la Gestion de Cursos");
         System.out.println("01. Crear Alumno");
-        System.out.println("02. Actualizar O eliminar Alumno");
-        System.out.println("03. Actualizar Curso");
-        System.out.println("04. Eliminar Curso");
-        System.out.println("05. Ver Cursos");
-        System.out.println("06. Salir");
+        System.out.println("02. Crear Curso");
+        System.out.println("03. Actualizar O eliminar Alumno");
+        System.out.println("04. Actualizar Curso");
+        System.out.println("05. Eliminar Curso");
+        System.out.println("06. Ver Cursos");
+        System.out.println("07. Salir");
         Integer opcion = scanner.nextInt();
         scanner.nextLine();
         return opcion;

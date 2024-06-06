@@ -1,6 +1,5 @@
 package Curso;
 
-import Estudiante.Estudiantes;
 import IF.Repository;
 import MisExcepciones.MiExcepcion;
 import Vista.consola;

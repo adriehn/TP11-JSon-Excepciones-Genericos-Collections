@@ -2,24 +2,17 @@ package Estudiante;
 
 import Curso.Cursos;
 import Curso.CursosRepositorio;
-import Curso.GestionCursos;
 import IF.Repository;
 import MisExcepciones.MiExcepcion;
 import Vista.consola;
 import com.google.gson.Gson;
 
 import java.io.*;
-import java.lang.reflect.Type;
-
-import java.util.HashSet;
-
 public class EstudiantesRepositorio implements Repository {
-    static Estudiantes estudiantes = new Estudiantes();
     Cursos cursos = new Cursos();
     CursosRepositorio cursosRepositorio = new CursosRepositorio();
     private static final String PATH = "src/main/resources/id.json";
     private final Gson gson = new Gson();
-
 
     @Override
     public void crear(Object o) throws MiExcepcion {
@@ -88,7 +81,6 @@ public class EstudiantesRepositorio implements Repository {
     public void verLista() {
 
     }
-
 
     public void guardarId() throws MiExcepcion {
         try (Writer writer = new FileWriter(PATH)) {

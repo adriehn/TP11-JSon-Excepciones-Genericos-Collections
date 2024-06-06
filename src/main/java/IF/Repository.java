@@ -1,8 +1,6 @@
 package IF;
 
-import Curso.Cursos;
 import MisExcepciones.MiExcepcion;
-import com.google.gson.internal.bind.ObjectTypeAdapter;
 
 public interface Repository <T> {
 

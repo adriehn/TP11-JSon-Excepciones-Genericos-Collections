@@ -8,8 +8,6 @@ import Vista.consola;
 public class EstudianteController {
     EstudiantesRepositorio estudiantesRepositorio = new EstudiantesRepositorio();
     GestionCursos gestionCursos = new GestionCursos();
-    Cursos cursos = new Cursos();
-
     public boolean trycatch(String atributo) {
         boolean check = false;
         try {
@@ -48,9 +46,7 @@ public class EstudianteController {
 
     }
 
-    public void listar() {
-        estudiantesRepositorio.verLista();
-    }
+
 
     public void ActualizarAlumno(consola view) throws MiExcepcion {
          estudiantesRepositorio.buscar(view);
