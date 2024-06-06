@@ -65,53 +65,76 @@ public class consola {
         gestionCursos.listar();
     }
 
-    public String pedirCurso()
-    {
+    public String pedirCurso() {
         System.out.println("Ingrese el codigo de su curso");
         return scanner.nextLine();
     }
-    public Integer pedirID()
-    {
+
+    public Integer pedirID() {
         System.out.println("Ingrese su ID");
         return scanner.nextInt();
     }
 
-    public Integer actualizarEstudiante()
-    {
+    public Integer actualizarEstudiante() {
         System.out.println("Que desea modificar?");
         System.out.println("01. Nombre");
         System.out.println("02. Email");
-Integer opcion = scanner.nextInt();
-        scanner.nextLine();
-        return opcion;
-    }
-
-    public Integer actualizarCurso()
-    {
-        System.out.println("Que desea modificar?");
-        System.out.println("01. Nombre");
         Integer opcion = scanner.nextInt();
         scanner.nextLine();
         return opcion;
     }
-    public void mensajeActualizarCurso () throws MiExcepcion {
+
+    public void mensajeActualizarCurso() throws MiExcepcion {
         System.out.println("A continuacion se le pedira el codigo del Curso...");
         gestionCursos.actualizarCurso(this);
     }
+
     public void mensajeactualizar() throws MiExcepcion {
         System.out.println("A continuacion se le solicitaran datos del curso y del alumno..");
         control.ActualizarAlumno(this);
     }
 
 
-
-    public Integer eliminarActualizar()
-    {
+    public Integer eliminarActualizar() {
         System.out.println("Que desea hacer?");
         System.out.println("01. Actualizar");
         System.out.println("02. Eliminar");
         Integer opcion = scanner.nextInt();
         scanner.nextLine();
         return opcion;
+    }
+
+    public Integer MenuPrincipal() {
+
+        System.out.println("Bienvenido a la Gestion de Cursos");
+        System.out.println("01. Crear Alumno");
+        System.out.println("02. Actualizar O eliminar Alumno");
+        System.out.println("03. Actualizar Curso");
+        System.out.println("04. Eliminar Curso");
+        System.out.println("05. Ver Cursos");
+        System.out.println("06. Salir");
+        Integer opcion = scanner.nextInt();
+        scanner.nextLine();
+        return opcion;
+    }
+
+
+    public void mensajeELiminarCurso() throws MiExcepcion {
+        gestionCursos.eliminarCurso(this);
+    }
+
+    public void iniciandoPrograma() {
+        System.out.println("Preparando todo para el inicio.......");
+        System.out.println("");
+        gestionCursos.prepararInicio();
+    }
+    public void finalizandoprograma() throws MiExcepcion {
+        System.out.println("Preparando todo para el cierre.......");
+        System.out.println("");
+        try {
+            gestionCursos.finalizacionDelPrograma();
+        } catch (MiExcepcion e) {
+            throw new RuntimeException(e);
+        }
     }
 }

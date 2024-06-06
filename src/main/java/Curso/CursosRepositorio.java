@@ -36,7 +36,12 @@ public class CursosRepositorio implements Repository {
 
     @Override
     public void eliminar(Object o, Object u) throws MiExcepcion {
-
+        if (u instanceof Cursos)
+        {
+            if(GestionCursos.mapaCursos.remove(o) != null) {
+                System.out.println("Eliminado con exito.");
+            }
+        }
     }
 
 

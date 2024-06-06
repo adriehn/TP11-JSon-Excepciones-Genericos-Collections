@@ -38,7 +38,7 @@ public class EstudiantesRepositorio implements Repository {
                         ((Estudiantes) o).setNombre(((consola) u).pedirNombre());
                         break;
                     case 2:
-                        ((Estudiantes) o).setNombre(((consola) u).pedirEmail());
+                        ((Estudiantes) o).setEmail(((consola) u).pedirEmail());
                         break;
                 }
             }
